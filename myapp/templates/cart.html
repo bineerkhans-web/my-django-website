@@ -1,0 +1,22 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block content %}
+  <main class="container py-5">
+    <div class="heading_container heading_center">
+      <h2>Your Cart</h2>
+    </div>
+    <div id="cart-content" class="mt-4">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6 mb-4 mb-md-0">
+            <h3 class="mb-2 fw-bold display-4" style="color:#000;">YOUR CART IS EMPTY. LET'S START AN ORDER!</h3>
+            <a href="/menu/" class="btn btn-danger">Start Order</a>
+          </div>
+          <div class="col-md-6 text-center">
+            <img loading="lazy" src="https://online.kfc.co.in/static/media/empty_cart.32f17a45.png" alt="Empty cart" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+{% endblock %}

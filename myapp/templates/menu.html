@@ -1,0 +1,195 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block content %}
+{% include 'offer_ext.html' %}
+<section class="food_section layout_padding-bottom">
+  <div class="container">
+    <div class="heading_container heading_center">
+      <h2>Our Menu</h2>
+    </div>
+    <ul class="filters_menu">
+      <li class="active" data-filter="*">All</li>
+      <li data-filter=".burger">Burger</li>
+      <li data-filter=".pizza">Pizza</li>
+      <li data-filter=".pasta">Pasta</li>
+      <li data-filter=".fries">Fries</li>
+    </ul>
+    <div class="filters-content">
+      <div class="row grid">
+        {% for food in foods %}
+        <div class="col-sm-6 col-lg-4 all pizza">
+          <div class="box">
+            <div>
+              <div class="img-box">
+                <img src="{{food.image.url}}" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>{{food.name}}</h5>
+                <p>{{food.description}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+        <div class="col-sm-6 col-lg-4 all burger">
+          <div class="box">
+            <div>
+              <div class="img-box">
+                <img src="{% static 'images/f2.png' %}" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>Delicious Burger</h5>
+                <p>Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque</p>
+                <div class="options">
+                  <h6>$15</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4 all pizza">
+          <div class="box">
+            <div>
+              <div class="img-box">
+                <img src="{% static 'images/f3.png' %}" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>Delicious Pizza</h5>
+                <p>Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque</p>
+                <div class="options">
+                  <h6>$17</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4 all pasta">
+          <div class="box">
+            <div>
+              <div class="img-box">
+                <img src="{% static 'images/f4.png' %}" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>Delicious Pasta</h5>
+                <p>Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque</p>
+                <div class="options">
+                  <h6>$18</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4 all fries">
+          <div class="box">
+            <div>
+              <div class="img-box">
+                <img src="{% static 'images/f5.png' %}" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>French Fries</h5>
+                <p>Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque</p>
+                <div class="options">
+                  <h6>$10</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4 all pizza">
+          <div class="box">
+            <div>
+              <div class="img-box">
+                <img src="{% static 'images/f6.png' %}" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>Delicious Pizza</h5>
+                <p>Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque</p>
+                <div class="options">
+                  <h6>$15</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4 all burger">
+          <div class="box">
+            <div>
+              <div class="img-box">
+                <img src="{% static 'images/f7.png' %}" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>Tasty Burger</h5>
+                <p>Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque</p>
+                <div class="options">
+                  <h6>$12</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4 all burger">
+          <div class="box">
+            <div>
+              <div class="img-box">
+                <img src="{% static 'images/f8.png' %}" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>Tasty Burger</h5>
+                <p>Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque</p>
+                <div class="options">
+                  <h6>$14</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4 all pasta">
+          <div class="box">
+            <div>
+              <div class="img-box">
+                <img src="{% static 'images/f9.png' %}" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>Delicious Pasta</h5>
+                <p>Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque</p>
+                <div class="options">
+                  <h6>$10</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="btn-box">
+        <a href="">View More</a>
+      </div>
+    </div>
+  </div>
+</section>
+<script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+<script src="{% static 'js/bootstrap.js' %}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script src="https://unpkg.com/isotope-layout@3.0.4/dist/isotope.pkgd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
+<script src="{% static 'js/custom.js' %}"></script>
+<script>
+  $(window).on('load', function () {
+      var $grid = $(".grid").isotope({
+          itemSelector: ".all",
+          percentPosition: false,
+          masonry: {
+              columnWidth: ".all"
+          }
+      });
+
+      $('.filters_menu li').click(function () {
+          $('.filters_menu li').removeClass('active');
+          $(this).addClass('active');
+
+          var data = $(this).attr('data-filter');
+          $grid.isotope({ filter: data })
+      });
+  });
+</script>
+{% endblock %}
